@@ -14,7 +14,7 @@ public class TestExercise2 {
     int a[] = {2, 7, 10, 4};
     int suma = 17;
 
-    boolean result = obj.esSubconjuntoSumaExt(a, suma);
+    boolean result = obj.esSubconjuntoSumaExt(a,0, suma);
 
     assertEquals(result, true, "La salida esperada es true pero se retorno un false.");
   }
@@ -25,7 +25,7 @@ public class TestExercise2 {
     int a[] = {2, 7, 10, 4};
     int suma = 16;
 
-    boolean result = obj.esSubconjuntoSumaExt(a, suma);
+    boolean result = obj.esSubconjuntoSumaExt(a, 0, suma);
 
     assertEquals(result, false, "La salida esperada es false pero se retorno un true.");    
   }
@@ -36,7 +36,7 @@ public class TestExercise2 {
     int a[] = {2, 7, 1, 4};
     int suma = 6;
 
-    boolean result = obj.esSubconjuntoSumaExt(a, suma);
+    boolean result = obj.esSubconjuntoSumaExt(a,0, suma);
 
     assertEquals(result, true, "La salida esperada es true pero se retorno un false.");  
   }
@@ -47,7 +47,7 @@ public class TestExercise2 {
     int a[] = {2, 7, 1, 4};
     int suma = 7;
 
-    boolean result = obj.esSubconjuntoSumaExt(a, suma);
+    boolean result = obj.esSubconjuntoSumaExt(a,0, suma);
 
     assertEquals(result, true, "La salida esperada es true pero se retorno un false.");
   }
@@ -58,7 +58,7 @@ public class TestExercise2 {
     int a[] = {2, 7, 1, 4};
     int suma = 8;
 
-    boolean result = obj.esSubconjuntoSumaExt(a, suma);
+    boolean result = obj.esSubconjuntoSumaExt(a,0, suma);
 
     assertEquals(result, false, "La salida esperada es false pero se retorno un true.");
   }
