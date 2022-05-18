@@ -8,24 +8,37 @@ public class Exercise2 {
 
 		Exercise2 obj = new Exercise2();
 		Scanner sc = new Scanner(System.in);
-		while (true) {
-
+			System.out.println("Inserte la longitud del arreglo");
 			int n = sc.nextInt(), suma;
 			int a[] = new int[n];
-
-			for (int i = 0; i < n; i++) {
+			System.out.println("inserte los datos");
+			for (int i = 0; i < a.length; i++) {
 				n = sc.nextInt();
 				a[i] = n;
 			}
+			System.out.println("ahora inserte la suma meta");
 
 			suma = sc.nextInt();
 
-			System.out.println(obj.esSubconjuntoSumaExt(a, suma));
-		}
+			System.out.println(obj.esSubconjuntoSumaExt(a, 0, suma));
+		sc.close();
 	}
 
-	public boolean esSubconjuntoSumaExt(int a[], int suma) {
-
-		return false;
+	boolean esSubconjuntoSumaExt(int a[], int n, int suma)
+	{
+		if (suma == 0 ){
+			return true;}
+		if (n == a.length){
+			return false;}
+		if(n<a.length-1){
+			if ((a[n]% 7)==0 && a[n+1]==1){
+				return esSubconjuntoSumaExt(a, n + 1, suma ); 
+			} 
+			if ((a[n]% 7)==0 &&a[n+1]!=1){
+				return esSubconjuntoSumaExt(a, n + 1, suma - a[n]);
+			}
+		}
+		return esSubconjuntoSumaExt(a, n + 1, suma - a[n])
+		|| esSubconjuntoSumaExt(a, n + 1, suma );
 	}
 }

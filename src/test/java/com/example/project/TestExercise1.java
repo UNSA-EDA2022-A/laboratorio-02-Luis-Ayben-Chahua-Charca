@@ -11,7 +11,7 @@ public class TestExercise1 {
   @Test
   public void case_1() {
 
-    boolean result = obj.esCuadradoPerfecto(25);
+    boolean result = obj.esCuadradoPerfecto(25,1);
 
     assertEquals(result, true, "La salida esperada es true pero se retorno un false.");
   }
@@ -19,7 +19,7 @@ public class TestExercise1 {
   @Test
   public void case_2() {
 
-    boolean result = obj.esCuadradoPerfecto(47);
+    boolean result = obj.esCuadradoPerfecto(47,1);
 
     assertEquals(result, false, "La salida esperada es false pero se retorno un true.");
   }
@@ -27,7 +27,7 @@ public class TestExercise1 {
   @Test
   public void case_3() {
 
-    boolean result = obj.esCuadradoPerfecto(0);
+    boolean result = obj.esCuadradoPerfecto(0,1);
 
     assertEquals(result, false, "La salida esperada es false pero se retorno un true.");
   }
@@ -35,7 +35,7 @@ public class TestExercise1 {
   @Test
   public void case_4() {
 
-    boolean result = obj.esCuadradoPerfecto(625);
+    boolean result = obj.esCuadradoPerfecto(625,1);
 
     assertEquals(result, true, "La salida esperada es true pero se retorno un false.");
   }
